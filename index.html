@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ferramenta de Desenho Online</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+  </div>
+
+  <div id="toolbar">
+    <label for="brush-color">Cor:</label>
+    <input type="color" id="brush-color">
+
+    <label for="brush-size">Espessura:</label>
+    <input type="range" id="brush-size" min="1" max="10" value="5">
+
+    <label for="brush-type">Tipo de Pincel:</label>
+    <select id="brush-type">
+      <option value="round">Redondo</option>
+      <option value="square">Quadrado</option>
+    </select>
+
+    <button id="undo-button">Desfazer</button>
+    <button id="redo-button">Refazer</button>
+    <button id="clear-button">Limpar</button>
+    <button id="save-button">Salvar</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
