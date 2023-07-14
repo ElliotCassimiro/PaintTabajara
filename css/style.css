@@ -1,19 +1,114 @@
+body {
+  background-color: rgb(83, 132, 141);
+}
+
+#h1 {
+  text-align:center;
+  color: #fffbfb;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  
+}
+
+#brush-color {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  
+}
+
 #canvas-container {
-    width: 800px;
-    height: 600px;
-    border: 1px solid #000;
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+    border: 1px solid #78e2ff;
     position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+
   }
   
   #canvas {
     width: 100%;
     height: 100%;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
   }
   
   #toolbar {
     margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c7e0eb;
+
   }
   
   button {
     margin-right: 5px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+
   }
+
+  button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  #undo-button {
+    background-color: #fff;
+    color: #000;
+  }
+  #redo-button {
+    background-color: #fff;
+    color: #000;
+  }
+  #clear-button {
+    background-color: #fff;
+    color: #000;
+  }
+  #save-button {
+    background-color: #fff;
+    color: #000;
+  }
+  #undo-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  #redo-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  #clear-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  #save-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+/* End of Code Snippet */

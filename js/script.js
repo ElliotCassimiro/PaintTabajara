@@ -18,6 +18,8 @@ ctx.lineWidth = brushSizeInput.value;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 
+
+
 // Função para ajustar o tamanho do canvas
 function setCanvasSize() {
     canvas.width = canvas.offsetWidth;
@@ -97,3 +99,5 @@ undoButton.addEventListener('click', undo);
 redoButton.addEventListener('click', redo);
 clearButton.addEventListener('click', clearCanvas);
 saveButton.addEventListener('click', saveImage);
+
+
