@@ -1,114 +1,92 @@
 body {
-  background-color: rgb(83, 132, 141);
+  background-color: #1f2937;
+  color: #ffffff;
 }
 
 #h1 {
-  text-align:center;
-  color: #fffbfb;
+  text-align: center;
   font-size: 60px;
   font-weight: bold;
   margin: 0;
   padding: 10px;
-  
 }
 
 #brush-color {
   width: 100px;
   height: 40px;
-  border: 1px solid #000;
+  border: none;
   border-radius: 5px;
   outline: none;
-  background-color: #fff;
-  
+  background-color: #ffffff;
 }
 
 #canvas-container {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
-    border: 1px solid #78e2ff;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
+  background-color: #212e3a;
+  border: 1px solid #78e2ff;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-  }
-  
-  #canvas {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #000;
-    background-color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
+#canvas {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  }
-  
-  #toolbar {
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    border-top: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #c7e0eb;
+#toolbar {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f1720;
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-  button {
-    margin-right: 5px;
-    padding: 5px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #fff;
-    outline: none;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
+button {
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #394e63;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-  }
+button:hover {
+  background-color: #283845;
+}
 
-  button:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  #undo-button {
-    background-color: #fff;
-    color: #000;
-  }
-  #redo-button {
-    background-color: #fff;
-    color: #000;
-  }
-  #clear-button {
-    background-color: #fff;
-    color: #000;
-  }
-  #save-button {
-    background-color: #fff;
-    color: #000;
-  }
-  #undo-button:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  #redo-button:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  #clear-button:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  #save-button:hover {
-    background-color: #000;
-    color: #fff;
-  }
+#undo-button,
+#redo-button,
+#clear-button,
+#save-button {
+  background-color: #64b4bd;
+  color: #ffffff;
+}
 
-/* End of Code Snippet */
+#undo-button:hover,
+#redo-button:hover,
+#clear-button:hover,
+#save-button:hover {
+  background-color: #628e9b;
+}

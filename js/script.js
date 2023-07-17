@@ -37,6 +37,9 @@ function startDrawing(event) {
   isDrawing = true;
   ctx.beginPath();
   ctx.moveTo(event.offsetX, event.offsetY);
+
+  // Save the initial state of the canvas onto the undoStack
+  undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
 }
 
 // Função para continuar o desenho
@@ -57,22 +60,25 @@ function stopDrawing() {
 
   // Adicionar ação ao stack de desfazer
   undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+
+  // Chamar a função undo imediatamente após salvar o estado
+  undo();
 }
 
 // Função para desfazer a última ação
 function undo() {
   if (undoStack.length === 0) return;
-  redoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
-  ctx.putImageData(undoStack.pop(), 0, 0);
+  redoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height)); // Save current state onto redoStack
+  const imageData = undoStack.pop(); // Retrieve the last state from undoStack
+  ctx.putImageData(imageData, 0, 0); // Restore the last state on the canvas
 }
 
-// Função para refazer a última ação desfeita
 function redo() {
   if (redoStack.length === 0) return;
-  undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
-  ctx.putImageData(redoStack.pop(), 0, 0);
+  undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height)); // Save current state onto undoStack
+  const imageData = redoStack.pop(); // Retrieve the last state from redoStack
+  ctx.putImageData(imageData, 0, 0); // Restore the last state on the canvas
 }
-
 // Função para limpar o canvas
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
